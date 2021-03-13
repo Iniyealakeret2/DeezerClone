@@ -8,7 +8,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.asLiveData
 import com.fevziomurtekin.deezer.core.data.ApiResult
-import com.fevziomurtekin.deezer.core.mapper
+import com.fevziomurtekin.deezer.core.mapper.mapper
 import com.fevziomurtekin.deezer.data.AlbumData
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

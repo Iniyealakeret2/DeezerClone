@@ -1,4 +1,4 @@
-package com.fevziomurtekin.deezer.core
+package com.fevziomurtekin.deezer.core.mapper
 
 import com.fevziomurtekin.deezer.data.AlbumData
 import com.fevziomurtekin.deezer.data.Data
@@ -6,6 +6,7 @@ import com.fevziomurtekin.deezer.entities.AlbumEntity
 import com.fevziomurtekin.deezer.entities.GenreEntity
 import timber.log.Timber
 
+const val EMPTY_STRING = ""
 
 fun AlbumEntity?.mapper(): AlbumData? = this?.let { e->
     AlbumData(
@@ -50,7 +51,14 @@ fun GenreEntity?.mapper(): Data = this?.let { e->
     )
 } ?: run {
     Data(
-        "", "", "", "", "", "", "", ""
+        EMPTY_STRING,
+        EMPTY_STRING,
+        EMPTY_STRING,
+        EMPTY_STRING,
+        EMPTY_STRING,
+        EMPTY_STRING,
+        EMPTY_STRING,
+        EMPTY_STRING
     )
 }
 
@@ -67,14 +75,14 @@ fun Data?.mapper(): GenreEntity = this?.let { d->
     )
 } ?: run {
     GenreEntity(
-        genreId = "",
-        name= "",
-        picture= "",
-        pictureBig= "",
-        pictureMedium= "",
-        pictureSmall= "",
-        pictureXl= "",
-        type= ""
+        genreId = EMPTY_STRING,
+        name= EMPTY_STRING,
+        picture= EMPTY_STRING,
+        pictureBig= EMPTY_STRING,
+        pictureMedium= EMPTY_STRING,
+        pictureSmall= EMPTY_STRING,
+        pictureXl= EMPTY_STRING,
+        type= EMPTY_STRING
     )
 }
 

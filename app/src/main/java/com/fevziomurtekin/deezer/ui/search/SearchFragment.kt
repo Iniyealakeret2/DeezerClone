@@ -7,12 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.VisibleForTesting
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import com.fevziomurtekin.deezer.R
 import com.fevziomurtekin.deezer.core.extensions.UIExtensions
 import com.fevziomurtekin.deezer.core.ui.DataBindingFragment
 import com.fevziomurtekin.deezer.databinding.FragmentSearchBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_search.*
+import kotlinx.coroutines.flow.collect
 
 @AndroidEntryPoint
 class SearchFragment: DataBindingFragment() {
@@ -29,16 +31,23 @@ class SearchFragment: DataBindingFragment() {
     override fun getSafeArgs() = Unit
 
     override fun initBinding() {
+
         binding.apply {
             lifecycleOwner = this@SearchFragment
             recentAdapter = RecentSearchAdapter(object : RecentSearchAdapter.RecentSearchListener{
                 override fun recentSearchListener(query: String) {
                     aetSearch.text = Editable.Factory.getInstance().newEditable(query)
-                    viewModel.queryLiveData.value = query
+                    binding.aetSearch.text = Editable.Factory.getInstance().newEditable(query)
                 }
             })
             searchAdapter = SearchAlbumAdapter()
             vm = viewModel
+        }
+
+        lifecycleScope.launchWhenCreated {
+            binding.aetSearch.textWatcher().collect {
+                viewModel.fetchSearch(it.toString())
+            }
         }
 
     }
@@ -47,7 +56,6 @@ class SearchFragment: DataBindingFragment() {
 
     override fun observeLiveData() {
         viewModel.fetchingRecentSearch()
-        viewModel.fetchSearch()
 
         viewModel.isNetworkError.observe(viewLifecycleOwner,{
             if(it){
