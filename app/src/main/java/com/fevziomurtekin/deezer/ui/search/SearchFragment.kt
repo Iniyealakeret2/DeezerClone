@@ -46,7 +46,7 @@ class SearchFragment: DataBindingFragment() {
 
         lifecycleScope.launchWhenCreated {
             binding.aetSearch.textWatcher().collect {
-                viewModel.fetchSearch(it.toString())
+                viewModel.queryLiveData.value = it.toString()
             }
         }
 
@@ -56,6 +56,7 @@ class SearchFragment: DataBindingFragment() {
 
     override fun observeLiveData() {
         viewModel.fetchingRecentSearch()
+        viewModel.fetchSearch()
 
         viewModel.isNetworkError.observe(viewLifecycleOwner,{
             if(it){

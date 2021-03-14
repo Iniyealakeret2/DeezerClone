@@ -41,15 +41,18 @@ class SearchViewModel @ViewModelInject constructor(
     /**
      * Each query update enter to switchmap
      */
-    fun fetchSearch(query: String){
+    fun fetchSearch(){
         viewModelScope.launch {
-                try{
-                    result =  repository.fetchSearch(query)
+            try{
+                result = queryLiveData.switchMap { q ->
+                    val asLiveData: LiveData<ApiResult<Any>> = repository.fetchSearch(q)
                         .asLiveData(viewModelScope.coroutineContext + Dispatchers.Main)
-                }catch (e: NetworkErrorException){
-                    isNetworkError.value = true
-                    Timber.e(e)
+                    asLiveData
                 }
+            }catch (e:NetworkErrorException){
+                isNetworkError.value = true
+                Timber.e(e)
+            }
         }
     }
 }

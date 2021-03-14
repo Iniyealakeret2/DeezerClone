@@ -36,15 +36,14 @@
   <component name="ChangeListManager">
     <list default="true" id="ce437ab8-1233-4a0a-b12c-814c7548547a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_album_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_album_details.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_artist_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_artist_details.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_artist_related.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_artist_related.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_artists.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_artists.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_favorites.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_favorites.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_genre.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_genre.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_search.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_search.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fevziomurtekin/deezer/ui/search/SearchAlbumAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fevziomurtekin/deezer/ui/search/SearchAlbumAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fevziomurtekin/deezer/ui/search/SearchExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fevziomurtekin/deezer/ui/search/SearchExtensions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fevziomurtekin/deezer/ui/search/SearchFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fevziomurtekin/deezer/ui/search/SearchFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fevziomurtekin/deezer/ui/search/SearchRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fevziomurtekin/deezer/ui/search/SearchRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fevziomurtekin/deezer/ui/search/SearchViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fevziomurtekin/deezer/ui/search/SearchViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/build-history.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/last-build.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,8 +88,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DEBUGGABLE_DEVICE" value="emulator-5554" />
+    <property name="DEBUGGABLE_PROCESS" value="com.fevziomurtekin.deezer" />
+    <property name="DEBUGGER_ID" value="Auto" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
   </component>
@@ -289,22 +292,26 @@
       <screen x="1440" y="33" width="1366" height="768" />
     </state>
     <state x="1945" y="198" key="AndroidCreateXmlResourceDialog/0.0.1440.900/1440.33.1366.768@1440.33.1366.768" timestamp="1615725465823" />
-    <state width="1322" height="194" key="GridCell.Tab.0.bottom" timestamp="1615725548223">
+    <state x="1892" y="167" key="AndroidProcessChooserDialog" timestamp="1615734565131">
       <screen x="1440" y="33" width="1366" height="768" />
     </state>
-    <state width="1322" height="194" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.33.1366.768@1440.33.1366.768" timestamp="1615725548223" />
-    <state width="1322" height="194" key="GridCell.Tab.0.center" timestamp="1615725548221">
+    <state x="1892" y="167" key="AndroidProcessChooserDialog/0.0.1440.900/1440.33.1366.768@1440.33.1366.768" timestamp="1615734565131" />
+    <state width="1322" height="113" key="GridCell.Tab.0.bottom" timestamp="1615734565157">
       <screen x="1440" y="33" width="1366" height="768" />
     </state>
-    <state width="1322" height="194" key="GridCell.Tab.0.center/0.0.1440.900/1440.33.1366.768@1440.33.1366.768" timestamp="1615725548221" />
-    <state width="1322" height="194" key="GridCell.Tab.0.left" timestamp="1615725548220">
+    <state width="1322" height="113" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.33.1366.768@1440.33.1366.768" timestamp="1615734565157" />
+    <state width="1322" height="113" key="GridCell.Tab.0.center" timestamp="1615734565156">
       <screen x="1440" y="33" width="1366" height="768" />
     </state>
-    <state width="1322" height="194" key="GridCell.Tab.0.left/0.0.1440.900/1440.33.1366.768@1440.33.1366.768" timestamp="1615725548220" />
-    <state width="1322" height="194" key="GridCell.Tab.0.right" timestamp="1615725548222">
+    <state width="1322" height="113" key="GridCell.Tab.0.center/0.0.1440.900/1440.33.1366.768@1440.33.1366.768" timestamp="1615734565156" />
+    <state width="1322" height="113" key="GridCell.Tab.0.left" timestamp="1615734565155">
       <screen x="1440" y="33" width="1366" height="768" />
     </state>
-    <state width="1322" height="194" key="GridCell.Tab.0.right/0.0.1440.900/1440.33.1366.768@1440.33.1366.768" timestamp="1615725548222" />
+    <state width="1322" height="113" key="GridCell.Tab.0.left/0.0.1440.900/1440.33.1366.768@1440.33.1366.768" timestamp="1615734565155" />
+    <state width="1322" height="113" key="GridCell.Tab.0.right" timestamp="1615734565157">
+      <screen x="1440" y="33" width="1366" height="768" />
+    </state>
+    <state width="1322" height="113" key="GridCell.Tab.0.right/0.0.1440.900/1440.33.1366.768@1440.33.1366.768" timestamp="1615734565157" />
     <state x="144" y="76" key="MergeDialog" timestamp="1607697338934">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -322,10 +329,26 @@
     </state>
     <state x="1831" y="208" width="668" height="522" key="find.popup/0.0.1440.900/1440.33.1366.768@1440.33.1366.768" timestamp="1615676200643" />
     <state x="412" y="205" width="615" height="490" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1607697962857" />
-    <state x="1805" y="129" width="670" height="577" key="search.everywhere.popup" timestamp="1615725288315">
+    <state x="1805" y="129" width="670" height="577" key="search.everywhere.popup" timestamp="1615732720038">
       <screen x="1440" y="33" width="1366" height="768" />
     </state>
-    <state x="1805" y="129" width="670" height="577" key="search.everywhere.popup/0.0.1440.900/1440.33.1366.768@1440.33.1366.768" timestamp="1615725288315" />
+    <state x="1805" y="129" width="670" height="577" key="search.everywhere.popup/0.0.1440.900/1440.33.1366.768@1440.33.1366.768" timestamp="1615732720038" />
     <state x="385" y="112" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1607697911952" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/fevziomurtekin/deezer/ui/search/SearchFragment.kt</url>
+          <line>48</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/fevziomurtekin/deezer/ui/search/SearchRepository.kt</url>
+          <line>36</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

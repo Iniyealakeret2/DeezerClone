@@ -25,7 +25,7 @@ class SearchRepository(
     private val deezerDao: DeezerDao
 ): DataSource(), SearchRepositoryImpl {
 
-    override fun fetchSearch(query:String) = flow{
+    override fun fetchSearch(query:String) = flow {
         emit(ApiResult.Loading)
         localCallInsert {
             insertSearch(SearchEntity(q=query))

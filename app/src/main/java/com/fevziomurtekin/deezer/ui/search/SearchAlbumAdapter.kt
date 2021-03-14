@@ -35,10 +35,12 @@ class SearchAlbumAdapter: RecyclerView.Adapter<SearchAlbumAdapter.SearchAlbumVie
         }
     }
 
-    fun addAlbumSearch(searchList: List<SearchData>) {
-        val previousSize = items.size
-        items.addAll(searchList)
-        notifyItemRangeChanged(previousSize, items.size)
+    fun addAlbumSearch(searchList: List<SearchData>?) {
+        searchList?.let {
+            val previousSize = items.size
+            items.addAll(searchList)
+            notifyItemRangeChanged(previousSize, items.size)
+        }
     }
 
     override fun onBindViewHolder(holder: SearchAlbumViewHolder, position: Int) {

@@ -21,7 +21,6 @@ import timber.log.Timber
 
 private const val DEBOUNCE_TIME = 300L
 
-@ExperimentalCoroutinesApi
 fun EditText.textWatcher(): Flow<CharSequence?> =
     callbackFlow<CharSequence?> {
         val watcher = object : TextWatcher {
@@ -72,7 +71,7 @@ fun bindingSearchAlbum(view: RecyclerView, results: LiveData<ApiResult<Any>>) {
             Timber.d("adapterSearchAlbum")
             (view.adapter as SearchAlbumAdapter)
                 .addAlbumSearch(
-                    ((results.value) as ApiResult.Success<List<SearchData>>).data)
+                    ((results.value) as? ApiResult.Success<List<SearchData>>)?.data)
         }
     }
 }
