@@ -54,7 +54,7 @@ internal fun SearchViewModel.initSearchActionListener() {
 fun bindingRecentSeach(view: RecyclerView, results: LiveData<ApiResult<List<SearchEntity>>>) {
     Timber.d("binding recentData : ${results.value}")
     when(results.value){
-        ApiResult.Loading, is ApiResult.Error-> {/* Nothing */ }
+        ApiResult.Loading, is ApiResult.Error-> Unit
         is ApiResult.Success -> {
             (view.adapter as RecentSearchAdapter)
                 .addRecentSearch(

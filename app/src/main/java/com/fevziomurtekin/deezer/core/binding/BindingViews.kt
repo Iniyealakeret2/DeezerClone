@@ -77,7 +77,7 @@ fun bindGone(view:View, isGone:Boolean){
 
 /* search layout */
 @BindingAdapter("isGoneLayout")
-fun<T> bindingIsGoneLayout(view: View,results:LiveData<ApiResult<T>>){
+fun<T> bindingIsGoneLayout(view: View, results:LiveData<ApiResult<T>>){
     Timber.d("bindingIsGoneLayout ${view.id == R.id.recyclerView}   result : ${Gson().toJson(results.value)}")
     if(results.value.isNotNull()) {
         when (results.value) {
